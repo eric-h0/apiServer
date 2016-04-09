@@ -7,8 +7,10 @@ var http = require("http");
 
 prompt.start();
 prompt.get(['site'], function(err, result) {
-    console.log('  site: ' + result.site);
-    request(result.site, function(error, response, body) {
+     var sitePlus = "http://" + result.site;
+     // console.log(sitePlus)
+     // console.log('  site: ' + result.site);
+    request(sitePlus, function(error, response, body) {
         if (!error && response.statusCode == 200) {
           var json = stringify(body, {maxLength: 0, indent: 1});
           fs.writeFile('index.html', json, function(err) {
@@ -21,10 +23,10 @@ prompt.get(['site'], function(err, result) {
            
            response.end(body);
            }).listen(3000);
-           console.log('Server running at http://127.0.0.1:3000/');
+           console.log('Opening: server running at http://127.0.0.1:3000/');
  
 
-          require("openurl").open('http://127.0.0.1:3000/')
+           require("openurl").open('http://127.0.0.1:3000/')
         }
     });
 });
