@@ -1,0 +1,24 @@
+{
+  "name": "thing",
+  "version": "1.0.0",
+  "description": "Takes in an api url and opens it in a local server.",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eric-h0/apiServer.git"
+  },
+  "author": "Eric Ho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eric-h0/apiServer/issues"
+  },
+  "homepage": "https://github.com/eric-h0/apiServer#readme",
+  "dependencies": {
+    "fs": "0.0.2",
+    "prompt": "^1.0.0",
+    "request": "^2.70.0"
+  }
+}
