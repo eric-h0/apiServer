@@ -19,6 +19,7 @@
   "dependencies": {
     "fs": "0.0.2",
     "open": "0.0.5",
+    "openurl": "^1.1.1",
     "prompt": "^1.0.0",
     "request": "^2.70.0"
   }

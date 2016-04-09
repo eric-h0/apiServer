@@ -1,11 +1,11 @@
 var prompt = require('prompt');
 var request = require('request');
 var fs = require('fs');
-var stringify = require("json-stringify-pretty-compact");
 var http = require("http");
 
 prompt.start();
 prompt.get(['site'], function(err, result) {
+  //www.omdbapi.com/?t=Inside+out&y=&plot=short&r=json
   var sitePlus = "http://" + result.site;
   request(sitePlus, function(error, response, body) {
     if (!error && response.statusCode == 200) {
