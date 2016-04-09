@@ -18,6 +18,7 @@
   "homepage": "https://github.com/eric-h0/apiServer#readme",
   "dependencies": {
     "fs": "0.0.2",
+    "open": "0.0.5",
     "prompt": "^1.0.0",
     "request": "^2.70.0"
   }
