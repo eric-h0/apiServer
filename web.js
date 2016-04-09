@@ -9,8 +9,9 @@ prompt.get(['site'], function(err, result) {
      var sitePlus = "http://" + result.site;
     request(sitePlus, function(error, response, body) {
         if (!error && response.statusCode == 200) {
-          var json = stringify(body, {maxLength: 0, indent: 1});
-          fs.writeFile('index.html', json, function(err) {
+          //Saves searched that you've done in a html file. Still tweaking.
+          var json = JSON.stringify(body);
+          fs.appendFile('log.html', '<pre id="json">' + json + '</pre>' + '\n\n', function(err) {
           if (err) throw err;
           console.log("Information added.")
         }) //End of fs.writeFile
